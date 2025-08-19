@@ -28,7 +28,7 @@ if not SUPABASE_URL or not SUPABASE_KEY:
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-# ------------------- Models -------------------
+#  Models
 class OTPRequest(BaseModel):
     email: str
 
@@ -41,7 +41,7 @@ class UserLogin(BaseModel):
     email: str
     auth_method: Optional[str] = None
 
-# ------------------- Routes -------------------
+#  Routes 
 
 @app.post("/send-otp")
 def send_otp(request: OTPRequest):
@@ -88,7 +88,6 @@ async def register_user(
         if auth_method == "voice" and voice is not None:
             voice_data = await voice.read()
             voice_embedding = get_voice_embedding(voice_data)
-            # Placeholder for uploading to Supabase storage
             voice_url = None
 
         insert_user_to_supabase({
@@ -168,3 +167,4 @@ async def verify_otp_voice(
             raise HTTPException(status_code=500, detail=f"Voice phrase verification failed: {str(e)}")
 
     return {"message": "OTP and voice phrase verified successfully.", "user": user}
+
