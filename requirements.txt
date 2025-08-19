@@ -13,14 +13,15 @@ speechbrain
 torchaudio
 librosa
 pyaudio
-soundfile          # Required for saving/reading .wav in Streamlit
-numpy              # Used by torchaudio and librosa
-scipy              # Common DSP helper used with librosa
+soundfile          
+numpy              
+scipy              
 
 # ASR (Automatic Speech Recognition)
-transformers       # For Wav2Vec2 ASR model
-torch              # Required backend for transformers & torchaudio
-sentencepiece      # Required by some models
+transformers     
+torch              
+sentencepiece      
 
 # Security
-itsdangerous       # Used for OTP token generation
+
+itsdangerous       
