@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 import os
 import sys
 
-# Add parent directory to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 load_dotenv()
@@ -167,4 +166,5 @@ async def verify_otp_voice(
             raise HTTPException(status_code=500, detail=f"Voice phrase verification failed: {str(e)}")
 
     return {"message": "OTP and voice phrase verified successfully.", "user": user}
+
 
