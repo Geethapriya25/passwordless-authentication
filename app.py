@@ -7,7 +7,7 @@ import soundfile as sf
 st.set_page_config(page_title="Voice + OTP Auth", layout="centered")
 BACKEND_URL = "http://localhost:8000"
 
-# Reset session option
+
 if st.sidebar.button("🔃 Reset Session"):
     st.session_state.clear()
     st.rerun()
@@ -15,7 +15,6 @@ if st.sidebar.button("🔃 Reset Session"):
 st.title("🔐 Secure Login / Registration")
 menu = st.sidebar.radio("Choose Mode", ["Register", "Login"])
 
-# Voice recording logic
 def record_and_store_voice():
     duration = 5
     samplerate = 16000
@@ -170,4 +169,5 @@ elif menu == "Login":
                 st.error(response.json().get("detail", "Verification failed."))
         except Exception as e:
             st.error(f"Verification failed: {str(e)}")
+
 
