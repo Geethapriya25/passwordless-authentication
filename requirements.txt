@@ -1,0 +1,26 @@
+fastapi
+uvicorn
+python-dotenv
+supabase
+cryptography
+streamlit
+requests
+pydantic
+twilio
+
+# Voice-related processing
+speechbrain
+torchaudio
+librosa
+pyaudio
+soundfile          # Required for saving/reading .wav in Streamlit
+numpy              # Used by torchaudio and librosa
+scipy              # Common DSP helper used with librosa
+
+# ASR (Automatic Speech Recognition)
+transformers       # For Wav2Vec2 ASR model
+torch              # Required backend for transformers & torchaudio
+sentencepiece      # Required by some models
+
+# Security
+itsdangerous       # Used for OTP token generation
