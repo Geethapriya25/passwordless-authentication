@@ -110,7 +110,7 @@ if menu == "Register":
         except Exception as e:
             st.error(f"Registration failed: {str(e)}")
 
-# ------------------------ LOGIN ------------------------ #
+#  LOGIN  #
 elif menu == "Login":
     st.subheader("🔐 Login")
 
@@ -170,3 +170,4 @@ elif menu == "Login":
                 st.error(response.json().get("detail", "Verification failed."))
         except Exception as e:
             st.error(f"Verification failed: {str(e)}")
+
