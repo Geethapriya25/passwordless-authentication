@@ -1,3 +1,4 @@
+# Backend
 fastapi
 uvicorn
 python-dotenv
@@ -6,22 +7,16 @@ cryptography
 streamlit
 requests
 pydantic
-twilio
 
-# Voice-related processing
+# Voice processing
 speechbrain
 torchaudio
 librosa
-pyaudio
-soundfile          
-numpy              
-scipy              
+soundfile
+numpy
+scipy
 
-# ASR (Automatic Speech Recognition)
-transformers     
-torch              
-sentencepiece      
-
-# Security
-
-itsdangerous       
+# Automatic Speech Recognition
+transformers
+torch
+sentencepiece
