@@ -9,11 +9,11 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
-SENDER_EMAIL = os.getenv("SENDER_EMAIL")  # e.g., verified SendGrid sender
+SENDER_EMAIL = os.getenv("SENDER_EMAIL")
 SECRET_KEY = os.getenv("OTP_SECRET", "fallback_secret_key")
 
 def generate_otp(length=10):
-    characters = string.ascii_letters + string.digits  # a-zA-Z0-9
+    characters = string.ascii_letters + string.digits
     return ''.join(random.choices(characters, k=length))
 
 def generate_otp_token(email: str, otp: str, validity_seconds=300):
@@ -56,3 +56,4 @@ def send_otp_email(to_email: str, otp: str):
     except Exception as e:
         print(f"Error sending OTP email: {e}")
         raise
+
